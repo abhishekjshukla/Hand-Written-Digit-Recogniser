@@ -1,0 +1,31 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+#canvasSimple{
+	border: 1px solid gray;
+	position: absolute;
+	left:40%;
+}
+.demoToolList
+{
+
+	margin-top:30px;
+	position: relative;
+	left:42%;
+}
+#btn-d{
+	position: absolute;
+	left:45%;
+	top:43%;
+}
+#ans
+{
+	position: absolute;
+	left:39%;
+	top:50%;
+}
+#clf
+{
+	margin-left: 20%;
+	margin-top: 7%;
+}
