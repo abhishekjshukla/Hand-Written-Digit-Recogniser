@@ -23,11 +23,10 @@ def home():
 		jsdata="ssss"
 		jsdata = request.form['data']
 		session['jsdata']=jsdata
-		print(jsdata)
 		final=get_img(session['jsdata'])
 		ans=final
 		ans=str(ans)
-		print("redir",final)
+		
 	print("ans is " ,ans,final)
 	return render_template("index.html",ans=final)
 def get_img(png_arr):
@@ -46,12 +45,10 @@ def get_img(png_arr):
 	gray=np.reshape(gray,(1,784))
 	ans=clf[int(session["clf"])].predict(gray)
 	temp=int(ans[0])
-	print(temp)
 	return temp
 @app.route("/get_val", methods=['GET', 'POST'])
 def get_val():
 	select = request.form.get("classifiers")
-	print("class is",select)
 	session["clf"]=select
 	return(str(select)) 
 if __name__ == '__main__':
